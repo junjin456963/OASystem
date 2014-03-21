@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*CSS reset*/
+html, body,
+div, span, p, a, img, strong, em, small,
+h1, h2, h3, h4,
+dl, dt, dd,
+ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+form, label, input, button, textarea, select {
+	margin : 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei", \5b8b\4f53, tahoma, arial;
+	vertical-align: baseline;
+}
+body { background-color: #eff5fa; }
+/**********/
+.price-reasons{
+	width: 394px;
+	height:246px;
+	border-radius:4px;
+	background-color: white;
+	padding:22px 20px;
+}
+.pri-top{
+	padding-bottom: 1px;
+	border-bottom: 1px solid #ff9900;
+	margin-bottom: 22px;
+}
+.pri-top h1{
+	width:104px;
+	height: 26px;
+	background-color: #ff9900;
+	color: white;
+	text-align:center;
+	line-height: 26px;
+}
+.pri-con{
+	_zoom:1;
+}
+.pri-con span{
+	padding-left:16px;
+}
+.reasons-text{
+	width: 280px;
+	height: 78px;
+	border: 1px solid #e1e1e1;
+	overflow-y:auto;
+	float: right;
+	margin-top: 4px;
+	margin-right: 20px;
+	_display:inline;
+}
+.pri-choice{
+	width: 234px;
+	float: right;
+	padding-right: 20px;
+	padding-top: 72px;
+}
+.pri-choice input{
+	width: 72px;
+	height: 24px;
+	color: white;
+	border-radius: 3px;
+	margin-left: 42px;
+	background-image: -webkit-linear-gradient(top,#bdc1c5,#8b919a);
+	background-color: #9ca1a8;
+	border: 1px solid #8c8d91;
+	cursor: pointer;
+	font-size: 14px;
+}

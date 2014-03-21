@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+  
+  
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>	
+  </bean>
+	
+	<!-- 员工的dao层 -->
+	<bean id="empDao" class="daoImpl.EmpDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 员工的service层 -->
+	<bean id="empService" class="serviceImpl.EmpServiceImpl">
+		<property name="edi" ref="empDao"/>
+	</bean>
+	<!-- 员工的action scope(不是单例)-->
+	<bean id="loginAction" class="action.LoginAction" scope="prototype">
+		<property name="esi" ref="empService"/>
+	    <property name="dsi" ref="depService"/>
+		<property name="psi" ref="posService"/>
+	</bean>
+
+	
+	<!-- 职务的dao层 -->
+	<bean id="posDao" class="daoImpl.PosDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 职务的service层 -->
+	<bean id="posService" class="serviceImpl.PosServiceImpl">
+		<property name="pdi" ref="posDao"/>
+	</bean>
+	<bean id="posAction" class="action.PosAction" scope="prototype">
+	    <property name="psi" ref="posService"/>
+	</bean>
+
+	
+	
+	<!-- 部门的dao层 -->
+	<bean id="depDao" class="daoImpl.DepDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 部门的service层 -->
+	<bean id="depService" class="serviceImpl.DepServiceImpl">
+		<property name="ddi" ref="depDao"/>
+	</bean>
+	
+	<bean id="DepAction" class="action.DepAction" scope="prototype">
+	<property name="esi" ref="empService"/>
+	<property name="dsi" ref="depService"/>
+	</bean>
+	
+	<!-- 报销单的dao层 -->
+	<bean id="claimDao" class="daoImpl.ClaimDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 报销单的service层 -->
+	<bean id="claimService" class="serviceImpl.ClaimServiceImpl">
+		<property name="cdi" ref="claimDao"/>
+	</bean>
+	<!-- 报销单的Action层 -->
+	<bean id="claimAction" class="action.ClaimAction" scope="prototype">
+	     <property name="csi" ref="claimService"/>
+	      <property name="psi" ref="posService"/>
+	      <property name="dsi" ref="detailService"/>
+	</bean>
+	
+	<!-- 报销单明细的dao层 -->
+	<bean id="detailDao" class="daoImpl.DetailDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 报销单明细的service层 -->
+	<bean id="detailService" class="serviceImpl.DetailServiceImpl">
+		<property name="ddi" ref="detailDao"/>
+	</bean>
+	<!-- 报销单明细的Action层 -->
+	<bean id="detailAction" class="action.DetailAction" scope="prototype">
+	     <property name="dsi" ref="detailService"/>
+	     <property name="csi" ref="claimService"/>
+	     <property name="psi" ref="posService"/>
+	</bean>
+	
+	<!-- 审核结果的dao层 -->
+	<bean id="approvalDao" class="daoImpl.ApprovalDaoImpl" >
+		<property name="sessionFactory"  ref="sessionFactory"></property>
+	</bean>
+	<!-- 审核结果的service层 -->
+	<bean id="approvalService" class="serviceImpl.ApprovalServiceImpl">
+		<property name="adi" ref="approvalDao"/>
+	</bean>
+	<!-- 审核结果的Action层 -->
+	
+	<bean id="approvalAction" class="action.AprrovalAction" scope="prototype">
+	     <property name="asi" ref="approvalService"/>
+	     <property name="csi" ref="claimService"/><!--
+	     <property name="psi" ref="posService"/>
+	--></bean>
+	
+	<!-- 事务声明处理AOP -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory" />
+
+	<aop:config>
+		<aop:advisor pointcut="execution(* serviceImpl.*.*(..))" advice-ref="txAdvice" />
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="Modify*" propagation="REQUIRED"/>
+			<tx:method name="Delete*" propagation="REQUIRED"/>			
+			<tx:method name="submit*" propagation="REQUIRED"/>
+			<tx:method name="list*" propagation="REQUIRED"/>
+			<tx:method name="add*" propagation="REQUIRED"/>		
+			<tx:method name="Add*" propagation="REQUIRED"/>		
+		</tx:attributes>
+	</tx:advice>
+</beans>        

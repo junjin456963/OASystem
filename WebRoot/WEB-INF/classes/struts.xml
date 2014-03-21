@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name ="objectFactory" value= "spring"></constant>
+	<package name="demo" extends="struts-default">
+		<action name="login" class="loginAction" >
+			<result name="success1" >/addEmp.jsp</result> 
+			<result name="success2">/manager_addEa.jsp</result>
+			<result name="success3">/Fin_addEa.jsp</result>
+			<result name="success4">/Emp_addEa.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="addEmp" class="loginAction" method="addEmp" >
+			<result name="success">/addEmp.jsp</result> 
+		</action>
+		<action name="getPosDep" class="loginAction" method="getPosDep" >
+			<result name="findEmpResult">/findEmp.jsp</result> 
+		</action>
+		<action name="getPosDepToAddEmp" class="loginAction" method="getPosDep" >
+			<result name="findEmpResult">/addEmp.jsp</result> 
+		</action>
+		<action name="getAllEmp" class="loginAction"  method="getAllEmp">
+            <result name="findEmpResult">/findEmp.jsp</result> 
+		</action>
+		
+		<action name="findEmpById" class="loginAction"  method="findEmpById">
+            <result name="success">/modifyEmp.jsp</result> 
+		</action>
+		<action name="modifyEmp" class="loginAction"  method="modifyEmp">
+            <result name="success" >/findEmp.jsp</result> 
+		</action>
+		<action name="modifyUser" class="loginAction"  method="modifyUser">
+            <result name="manager" >/manager_modifyUser.jsp</result>
+            <result name="administration" >/modifyUser.jsp</result>
+            <result name="finance" >/Fin_modifyUser.jsp</result>
+            <result name="normal" >/Emp_modifyUser.jsp</result> 
+		</action>
+		<action name="modifyPw" class="loginAction"  method="modifyPw">
+            <result name="manager" >/manager_modifyPw.jsp</result>
+            <result name="administration" >/modifyPw.jsp</result>
+            <result name="finance" >/Fin_modifyPw.jsp</result>
+            <result name="normal" >/Emp_modifyPw.jsp</result> 
+		</action>
+		<action name="deleteEmp" class="loginAction"  method="deleteEmp">
+            <result name="success" >/findEmp.jsp</result> 
+		</action>
+			<action name="ListAllEmByEid" class="loginAction"  method="ListAllEmByEid">
+            <result>/findEmp.jsp</result> 
+		</action>
+		
+		<!-- 职务对应的Action操作 -->
+		<action name="addPostServlet" class="posAction" method="addPos" >
+			<result name="success">/findPos.jsp</result> 
+		</action>
+		<action name="findPostServlet" class="posAction" method="getAllPos" >
+			<result name="findPosResult">/findPos.jsp</result> 
+		</action>
+		<action name="ListAllPoByEid" class="posAction" method="ListAllPoByEid" >
+			<result >/findPos.jsp</result> 
+		</action>
+
+		
+		<!-- 报销单对应的Action操作 -->
+		<action name="test" class="claimAction" >
+			<result name="success">/login.jsp</result> 
+		</action>
+		<action name="FindClaimByState" class="claimAction" method="FindClaimByState">
+		    <result name="manager" >/manager_findEa.jsp</result>
+            <result name="administration" >/findEa.jsp</result>
+            <result name="finance" >/Fin_findEa.jsp</result>
+            <result name="normal" >/Emp_findEa.jsp</result> 
+		</action>
+		<action name="CheckClaim" class="claimAction" method="CheckClaim">
+			<result name="success">/manager_checkEa.jsp</result> 
+		</action>
+		<action name="CheckClaimDetail" class="claimAction" method="CheckClaimDetail">
+			<result name="success">/manager_checkEa1.jsp</result> 
+		</action>
+		<action name="ModifyPayCost" class="claimAction" method="ModifyPayCost">
+			<result name="success" type="redirectAction">/FindPayClaim</result> 
+		</action>
+		<action name="DeleteClaim" class="claimAction" method="DeleteClaim">
+		    <result name="manager" >/manager_findEa.jsp</result>
+            <result name="administration" >/findEa.jsp</result>
+            <result name="finance" >/Fin_findEa.jsp</result>
+            <result name="normal" >/Emp_findEa.jsp</result> 
+		</action>
+		<action name="FindPayClaim" class="claimAction" method="FindPayClaim">
+			<result name="success">/Fin_payEa.jsp</result> 
+		</action>
+		
+		<!-- 报销单明细对应的Action操作    -->
+		<action name="SaveSession" class="detailAction" method="SaveSession" >
+			<result name="manager" >/manager_addEa.jsp</result>
+            <result name="administration" >/addEa.jsp</result>
+            <result name="finance" >/Fin_addEa.jsp</result>
+            <result name="normal" >/Emp_addEa.jsp</result> 
+		</action>
+	    <action name="DeleteSession" class="detailAction" method="DeleteSession" >
+			<result name="manager" >/manager_addEa.jsp</result>
+            <result name="administration" >/addEa.jsp</result>
+            <result name="finance" >/Fin_addEa.jsp</result>
+            <result name="normal" >/Emp_addEa.jsp</result>
+		</action>
+		<action name="SaveDetail" class="detailAction" >
+			<result name="manager" >/manager_addEa.jsp</result>
+            <result name="administration" >/addEa.jsp</result>
+            <result name="finance" >/Fin_addEa.jsp</result>
+            <result name="normal" >/Emp_addEa.jsp</result> 
+		</action>
+		<action name="FindDetail" class="detailAction" method="FindDetail">
+			<result name="manager" >/manager_detailEa.jsp</result>
+            <result name="administration" >/detailEa.jsp</result>
+            <result name="finance" >/Fin_detailEa.jsp</result>
+            <result name="normal" >/Emp_detailEa.jsp</result> 
+        </action>
+		
+		<!-- 审核表对应的Action操作 -->
+		<action name="addApproval" class="approvalAction">
+			<result name="success" type="redirectAction">/CheckClaim</result> 
+        </action>
+		
+		<!-- 部门ACTION -->
+		<action name="addDep" class="DepAction" method="addDep" >
+			<result name="success">/addDep.jsp</result> 
+		</action>
+		<action name="FindDep" class="DepAction" method="getAllDep" >
+			<result name="findDepResult">/findDep.jsp</result> 
+		</action>
+
+		<action name="deleteDep" class="DepAction" method="deleteDep" >
+			<result name="success">/findDep.jsp</result> 
+		</action>
+		<action name="findDepById" class="DepAction" method="findDepById" >
+			<result name="success">/modifyDep.jsp</result> 
+		</action>
+		<action name="modifyDep" class="DepAction"  method="modifyDep">
+            <result name="success" >/findDep.jsp</result> 
+		</action>
+		<action name="ListAllDeByEid" class="DepAction"  method="ListAllDeByEid">
+            <result>/findDep.jsp</result> 
+		</action>
+	
+		<!--   
+		<action name="FindAllEmpAction" class="empAction" method="FindAllEmp">
+			<result name="error">/index.jsp</result>
+			<result>/printf.jsp</result>
+		</action>  -->
+	</package>
+</struts>
+

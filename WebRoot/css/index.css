@@ -1,0 +1,139 @@
+html, body,
+div, span, p, a, img, strong, em, small,
+h1, h2, h3, h4,
+dl, dt, dd,
+ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+form, label, input, button, textarea, select {
+	margin : 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei", \5b8b\4f53, tahoma, arial;
+	vertical-align: baseline;
+}
+html,body{
+	height:100%;
+}
+body{
+	background: url(../img/ind-all.jpg) repeat;
+}
+.ind-all{
+	width: 100%;
+	height: 100%;
+}
+.ind-top{
+	height:34px;
+	background-color: #ff7404;
+}
+.ind-land{
+	width:450px;
+	height: 326px;
+	border-radius:3px;
+	margin:100px auto 294px;
+	padding-top: 100px;
+	box-reflect: below 0px -webkit-gradient(linear, 0 70%, 0 100%, from(transparent),to(rgb(0,0,0)));
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, 0 70%, 0 100%, from(transparent), to(rgb(0,0,0)));
+}
+.ind-land-top{
+	width: 450px;
+	height:35px;
+	background:url(../img/ind-land.png) no-repeat 0 0;
+}
+.ind-land h1{
+	font-weight: normal;
+	color: #ff9900;
+	text-align: center;
+	font-size: 16px;
+	height: 38px;
+	line-height:60px;
+	padding-bottom: 27px;
+}
+.ind-go{
+		background-color:white;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+}
+.ind-go span{
+	border-bottom: 1px solid #aaa7a4;
+	color: #aaa7a4;
+	cursor: pointer; 
+}
+.ind-go p{
+	width: 282px;
+	margin: 0 auto;
+	text-align: right;
+}
+.ind-go dl{
+	line-height: 40px;
+	position: relative;
+	width: 282px;
+	padding-bottom:14px;
+	margin: 0 auto;
+}
+.ind-Nametext{
+	width: 250px;
+	height: 40px;
+	border-radius: 3px;
+	margin-left: 30px;
+	line-height: 20px;
+}
+.ind-Passtext{
+	width: 250px;
+	height: 40px;
+	border-radius: 3px;
+	margin-left: 30px;
+	line-height: 20px;
+}
+.ind-password label{
+	left: 7px;
+	position: absolute;
+	top: 7px;
+	z-index: 2;
+	background: url(../img/ind-pass.png) no-repeat 0 0;
+	text-indent: -9999em;
+	width: 25px;
+	height: 25px;
+}
+.ind-name label{
+	left: 7px;
+	position: absolute;
+	top: 7px;
+	z-index: 2;
+	background: url(../img/ind-name.png) no-repeat 0 0;
+	text-indent: -9999em;
+	width: 25px;
+	height: 25px;
+}
+.ind-name dd{
+	position: relative;
+	width: 280px;
+	border: 1px solid #ded9d4;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
+.ind-password dd{
+	position: relative;
+	width: 280px;
+	border: 1px solid #ded9d4;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
+.ind-Login{
+	width: 280px;
+	height: 40px;
+	color: white;
+	background-color: #F89406;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border: 1px solid #CCC;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	display: inline-block;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	cursor:pointer;
+	margin: 14px 0 34px 0;
+}

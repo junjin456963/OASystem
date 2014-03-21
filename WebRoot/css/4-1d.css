@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*CSS reset*/
+html, body,
+div, span, p, a, img, strong, em, small,
+h1, h2, h3, h4,
+dl, dt, dd,
+ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+form, label, input, button, textarea, select {
+	margin : 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei", \5b8b\4f53, tahoma, arial;
+	vertical-align: baseline;
+}
+body { background-color: #eff5fa; }
+/****************/
+.delete-reason{
+	width: 438px;
+	height:184px;
+	background-color: white;
+	border-radius: 4px;
+}
+.delete-reason p{
+	text-align: center;
+	color: #9e9e9e;
+	font-size: 18px;
+	padding-top: 58px;
+}
+.del-choice{
+	width: 234px;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-top: 42px;
+}
+.del-choice input{
+	width: 72px;
+	height: 24px;
+	color: white;
+	border-radius: 3px;
+	margin:0  21px;
+	background-image: -webkit-linear-gradient(top,#bdc1c5,#8b919a);
+	background-color: #9ca1a8;
+	border: 1px solid #8c8d91;
+	cursor: pointer;
+	font-size: 14px;
+}

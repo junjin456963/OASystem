@@ -1,0 +1,93 @@
+@charset "UTF-8";
+body{
+		background: black;
+	}
+.ale-add{
+	width: 440px;
+	height:285px;
+	border-radius: 3px;
+	background: white;
+}
+.add-user{
+	width: 106px;
+	height: 28px;
+	line-height: 28px;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	background: #ff9900;
+}
+.add-head{
+	width:398px; 
+	height: 29px;
+	border-bottom: 1px solid #ff9900;
+	margin: 0 auto;
+	padding-top:22px; 
+}
+.add-item{
+	width: 394px;
+	height: 26px;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+.clear{
+	clear:both;
+}
+.add-item span{
+	float: left;
+	width:100px;
+	height: 26px;
+	font-size: 14px;
+	color: #727272;
+	text-align: right;
+}
+.add-item .add-name{
+	float:left;
+	width: 260px;
+	height: 20px;
+	line-height: 26px;
+	border: 1px solid #e1e1e1;
+	margin-left: 20px;
+}
+.add-sel{
+	width: 80px;
+	height: 18px;
+	margin-left: 20px;
+	border: 1px solid #a3a3a3;
+	border-radius: 3px;
+	font-size: 12px;
+}
+.add-btn{
+	width: 230px;
+	height: 26px;
+	padding: 36px 0 0 150px;
+}
+.cancel{
+	width: 72px;
+	height: 24px;
+	color: white;
+	font-size: 14px;
+	border-radius: 3px;
+	background-image: -webkit-linear-gradient(top,#bdc1c5,#8b919a);
+	border: 1px solid #8c8d91;
+	cursor: pointer;
+	margin-left:40px;	
+}
+.ale-a{
+	width: 438px;
+	height: 286px;
+}
+.add-a-b{
+	margin-top: 30px;
+}
+.add-b-choice1,.add-b-choice2{
+	float: left;
+	width: 50px;
+	height: 15px;
+	margin-top: 3px;
+}
+.add-item .add-store{
+	float: left;
+	width: 160px;
+	height: 18px;
+}

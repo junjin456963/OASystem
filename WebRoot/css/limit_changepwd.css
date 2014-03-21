@@ -1,0 +1,50 @@
+.limit-h1{
+	background: url("../img/auth-smartlogo.gif") 0 0 no-repeat;
+	float: left;
+	width: 24px;
+	height: 30px;
+	margin: -38px 0px 0px 32px;
+}
+.limit-xiugai{
+	width: 480px;
+	height: 29px;
+	margin-top: 32px;
+	padding-left: 60px;
+	overflow: hidden;
+}
+.limit-xiugai span{
+	width: 46px;
+	height: 20px;
+	margin-right: 16px;
+	font-size: 14px;
+	color: #727272;
+	overflow: hidden;
+}
+.limit-xiugai input{
+	width: 376px;
+	height: 26px;
+	border: 1px solid #e1e1e1;
+	font-size: 14px;
+}
+.limit-old-wd{
+	margin-top: 10px;
+}
+.limit-ture{
+	padding-left: 46px;
+}
+.limit-ture span{
+	width: 60px;
+}
+.limit-btn{
+	width: 122px;
+	height: 34px;
+	background: url("../img/limit-input.png") 0 0 no-repeat;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 6px;
+	margin: 34px 0px 0px 120px;
+}
+.limit-btn-turn{
+	margin-left: 26px;
+}

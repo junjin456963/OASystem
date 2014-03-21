@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*CSS reset*/
+html, body,
+div, span, p, a, img, strong, em, small,
+h1, h2, h3, h4,
+dl, dt, dd,
+ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+form, label, input, button, textarea, select {
+	margin : 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei", \5b8b\4f53, tahoma, arial;
+	vertical-align: baseline;
+}
+body { background-color: #eff5fa; }
+/**********/
+.edit-portal{
+	width: 391px;
+	height: 246px;
+	border-radius:4px;
+	background-color: white;
+	padding:22px 20px;
+}
+.edit-top{
+	padding-bottom: 1px;
+	border-bottom: 1px solid #ff9900;
+	margin-bottom: 22px;
+}
+.edit-top h1{
+	width:104px;
+	height: 26px;
+	background-color: #ff9900;
+	color: white;
+	text-align:center;
+	line-height: 26px;
+}
+.ePortal-con{
+	color:#727272;
+}
+.ePortal-con p{
+	padding-left: 18px;
+	padding-bottom: 24px;
+	_zoom:1;
+}
+.ePortal-con label{
+	float: left;
+	margin-top: -1px;
+}
+.ePortal-con input{
+	width: 278px;
+	height: 18px;
+	border: 1px solid #e1e1e1;
+	margin-left: 14px;
+}
+.ePortal-choice{
+	width: 234px;
+	padding-right: 42px;
+	padding-top: 72px;
+	margin: 0 auto;
+}
+.ePortal-choice input{
+	width: 72px;
+	height: 24px;
+	color: white;
+	border-radius: 3px;
+	margin-left: 42px;
+	background-image: -webkit-linear-gradient(top,#bdc1c5,#8b919a);
+	background-color: #9ca1a8;
+	border: 1px solid #8c8d91;
+	cursor: pointer;
+	font-size: 14px;
+}

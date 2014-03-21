@@ -1,0 +1,108 @@
+.approve .sell-time-seekbut{
+	color:white;
+	margin-left:0px;
+	width:122px;
+	height:34px;
+	margin-top:21px;
+	border:none;
+	background: url(../img/sold-note.gif) 0 0 no-repeat;
+}
+.approve .market-sell-table{
+	margin-top: 37px;
+}
+
+.report .sell-time-seekbut{
+	color:white;
+	margin-left:0px;
+	width:122px;
+	height:34px;
+	margin-top:21px;
+	margin-right: 25px;
+	border:none;
+	background: url(../img/sold-note.gif) 0 0 no-repeat;
+}
+.report .report-time-span{
+	color:#ff9f10;
+	font-size: 16px;
+}
+.report .market-sell-time{
+	margin-bottom:38px;
+}
+.report .market-sell-table{
+	margin-top: 22px;
+}
+.report .sell-table-center{
+	margin-top:26px;
+}
+.report .report-derive{
+	color:white;
+	margin-left:0px;
+	width:122px;
+	height:34px;
+	margin-top:24px;
+	margin-right: 25px;
+	border:none;
+	background: url(../img/sold-note.gif) 0 0 no-repeat;
+}
+
+
+
+.reduce .market-sell-table{
+	margin-top: 26px;
+}
+.reduce .sell-table-center{
+	margin-top:26px;
+	margin-bottom:26px;
+}
+
+
+
+.store .sell-time-seektext{
+	margin-left:34px;
+}
+.store .sell-time-shop span{
+	margin-right:16px;
+	font-size: 14px;
+	color:#7b7b7b;
+}
+.store .market-sell-table{
+	margin-top: 33px;
+}
+.store .sell-table-center{
+	margin-top:26px;
+	margin-bottom:26px;
+}
+.attendance .sell-time-shop span{
+	font-size: 14px;
+	color:#7b7b7b;
+	margin-right:16px;
+}
+.attendance .market-sell-table{
+	margin-top: 37px;
+}
+.attendance .sell-table-center{
+	margin-top:45px;
+	margin-bottom:35px;
+}
+.attendance .sell-time-shop{
+	margin-left: 100px;
+}
+
+
+.user .sell-time-seekbut{
+	color:white;
+	margin-left:460px;
+	width:122px;
+	height:34px;
+	margin-top:24px;
+	margin-right: 25px;
+	border:none;
+	background: url(../img/sold-note.gif) 0 0 no-repeat;
+}
+.user .sell-time-seek select{
+	margin-top: 24px;
+	width:82px;
+	height:18px;
+	font-size: 12px;
+	border:1px solid #e1e1e1;
+}

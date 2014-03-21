@@ -1,0 +1,85 @@
+html, body,
+div, span, p, a, img, strong, em, small,
+h1, h2, h3, h4,
+dl, dt, dd,
+ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+form, label, input, button, textarea, select {
+	margin : 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei", \5b8b\4f53, tahoma, arial;
+	vertical-align: baseline;
+}
+body{background-color: #333;}
+.sales-record{
+	width:398px;
+	height: 462px;
+	background-color: white;
+	border-radius:3px;
+	padding:22px 20px;
+}
+.sales-top{
+	padding-bottom: 1px;
+	border-bottom: 1px solid #ff9900;
+	margin-bottom: 22px;
+}
+.sales-top h1{
+	width:104px;
+	height: 26px;
+	background-color: #ff9900;
+	color: white;
+	text-align:center;
+	line-height: 26px;
+}
+.sales-con p{
+	padding-bottom: 10px;
+	padding-left: 16px;
+	color:#727272;
+}
+.sales-price{
+	padding-top: 20px;
+}
+.sales-price input{
+	width: 76px;
+	height: 20px;
+	border: 1px solid #e1e1e1;
+	text-align: center;
+}
+.sales-reduce{
+	width: 60px;
+	height: 21px;
+	border: 1px solid #a3a3a3;
+	border-radius:3px;
+	font-size: 12px;
+}
+.sales-state{
+	padding-left: 16px;
+	color:#727272;
+}
+.sales-state p{
+	padding-left: 72px;
+}
+.sales-check span{
+	font-size: 15px;
+	padding-right: 18px;
+}
+.sales-choice{
+	width: 234px;
+	margin:26px auto;
+}
+.sales-choice input{
+	width: 72px;
+	height: 24px;
+	color: white;
+	border-radius: 3px;
+	margin-right: 42px;
+	background-image: -webkit-linear-gradient(top,#bdc1c5,#8b919a);
+	background-color: #9ca1a8;
+	border: 1px solid #8c8d91;
+	cursor: pointer;
+}
+

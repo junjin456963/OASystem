@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="demo" location="0,0" size="0,0">
+    <action name="login" location="0,0" size="0,0">
+      <result name="success1">
+        <resourceEdge source="success1" routing="0" target="addEmp.jsp" />
+      </result>
+      <result name="success2">
+        <resourceEdge source="success2" routing="0" target="manager_addEa.jsp" />
+      </result>
+      <result name="success3">
+        <resourceEdge source="success3" routing="0" target="Fin_addEa.jsp" />
+      </result>
+      <result name="success4">
+        <resourceEdge source="success4" routing="0" target="Emp_addEa.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="addEmp" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addEmp.jsp" />
+      </result>
+    </action>
+    <action name="getPosDep" location="0,0" size="0,0">
+      <result name="findEmpResult">
+        <resourceEdge source="findEmpResult" routing="0" target="findEmp.jsp" />
+      </result>
+    </action>
+    <action name="getPosDepToAddEmp" location="0,0" size="0,0">
+      <result name="findEmpResult">
+        <resourceEdge source="findEmpResult" routing="0" target="addEmp.jsp" />
+      </result>
+    </action>
+    <action name="getAllEmp" location="0,0" size="0,0">
+      <result name="findEmpResult">
+        <resourceEdge source="findEmpResult" routing="0" target="findEmp.jsp" />
+      </result>
+    </action>
+    <action name="findEmpById" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="modifyEmp.jsp" />
+      </result>
+    </action>
+    <action name="modifyEmp" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="findEmp.jsp" />
+      </result>
+    </action>
+    <action name="modifyUser" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_modifyUser.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="modifyUser.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_modifyUser.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_modifyUser.jsp" />
+      </result>
+    </action>
+    <action name="modifyPw" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_modifyPw.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="modifyPw.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_modifyPw.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_modifyPw.jsp" />
+      </result>
+    </action>
+    <action name="deleteEmp" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="findEmp.jsp" />
+      </result>
+    </action>
+    <action name="addPostServlet" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="findPos.jsp" />
+      </result>
+    </action>
+    <action name="findPostServlet" location="0,0" size="0,0">
+      <result name="findPosResult">
+        <resourceEdge source="findPosResult" routing="0" target="findPos.jsp" />
+      </result>
+    </action>
+    <action name="test" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="FindClaimByState" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_findEa.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="findEa.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_findEa.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_findEa.jsp" />
+      </result>
+    </action>
+    <action name="CheckClaim" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="manager_checkEa.jsp" />
+      </result>
+    </action>
+    <action name="CheckClaimDetail" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="manager_checkEa1.jsp" />
+      </result>
+    </action>
+    <action name="SaveSession" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_addEa.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="addEa.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_addEa.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_addEa.jsp" />
+      </result>
+    </action>
+    <action name="SaveDetail" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_addEa.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="addEa.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_addEa.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_addEa.jsp" />
+      </result>
+    </action>
+    <action name="FindDetail" location="0,0" size="0,0">
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager_detailEa.jsp" />
+      </result>
+      <result name="administration">
+        <resourceEdge source="administration" routing="0" target="detailEa.jsp" />
+      </result>
+      <result name="finance">
+        <resourceEdge source="finance" routing="0" target="Fin_detailEa.jsp" />
+      </result>
+      <result name="normal">
+        <resourceEdge source="normal" routing="0" target="Emp_detailEa.jsp" />
+      </result>
+    </action>
+    <action name="addApproval" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="addDep" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="FindDep" location="0,0" size="0,0">
+      <result name="findDepResult" />
+    </action>
+    <action name="deleteDep" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="findDepById" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="modifyDep" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="addEmp.jsp" path="/addEmp.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_addEa.jsp" path="/manager_addEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Fin_addEa.jsp" path="/Fin_addEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Emp_addEa.jsp" path="/Emp_addEa.jsp" location="0,0" size="0,0" />
+  <webResource name="login.jsp" path="/login.jsp" location="0,0" size="0,0" />
+  <webResource name="findEmp.jsp" path="/findEmp.jsp" location="0,0" size="0,0" />
+  <webResource name="modifyEmp.jsp" path="/modifyEmp.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_modifyUser.jsp" path="/manager_modifyUser.jsp" location="0,0" size="0,0" />
+  <webResource name="modifyUser.jsp" path="/modifyUser.jsp" location="0,0" size="0,0" />
+  <webResource name="Fin_modifyUser.jsp" path="/Fin_modifyUser.jsp" location="0,0" size="0,0" />
+  <webResource name="Emp_modifyUser.jsp" path="/Emp_modifyUser.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_modifyPw.jsp" path="/manager_modifyPw.jsp" location="0,0" size="0,0" />
+  <webResource name="modifyPw.jsp" path="/modifyPw.jsp" location="0,0" size="0,0" />
+  <webResource name="Fin_modifyPw.jsp" path="/Fin_modifyPw.jsp" location="0,0" size="0,0" />
+  <webResource name="Emp_modifyPw.jsp" path="/Emp_modifyPw.jsp" location="0,0" size="0,0" />
+  <webResource name="findPos.jsp" path="/findPos.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_findEa.jsp" path="/manager_findEa.jsp" location="0,0" size="0,0" />
+  <webResource name="findEa.jsp" path="/findEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Fin_findEa.jsp" path="/Fin_findEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Emp_findEa.jsp" path="/Emp_findEa.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_checkEa.jsp" path="/manager_checkEa.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_checkEa1.jsp" path="/manager_checkEa1.jsp" location="0,0" size="0,0" />
+  <webResource name="addEa.jsp" path="/addEa.jsp" location="0,0" size="0,0" />
+  <webResource name="manager_detailEa.jsp" path="/manager_detailEa.jsp" location="0,0" size="0,0" />
+  <webResource name="detailEa.jsp" path="/detailEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Fin_detailEa.jsp" path="/Fin_detailEa.jsp" location="0,0" size="0,0" />
+  <webResource name="Emp_detailEa.jsp" path="/Emp_detailEa.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+
